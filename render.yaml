@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: hermes-nexflow
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: BREVO_API_KEY
+        sync: false
+      - key: TAVILY_API_KEY
+        sync: false
+      - key: N8N_BASE_URL
+        value: https://n8n-latest-xl9k.onrender.com
+      - key: PORT
+        value: "3000"
